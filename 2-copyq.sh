@@ -1,4 +1,4 @@
-sudo apt install copyq
+sudo apt install copyq -y
 
 
 #setting a shourtcut as Super V
@@ -10,6 +10,7 @@ COMMAND="/usr/bin/copyq show"
 SHORTCUT="<Super>v"
 
 # Check if the shortcut already exists
+mkdir -p "/home/$USER/.config/autostart"
 if [ -f "/home/$USER/.config/autostart/$NAME.desktop" ]; then
     echo "$NAME already exists.."
 else

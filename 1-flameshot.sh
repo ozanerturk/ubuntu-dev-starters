@@ -1,7 +1,6 @@
 
 
-sudo apt install flameshot
-
+sudo apt install flameshot -y
 
 #setting a shourtcut as PrtSc
 #!/bin/bash
@@ -13,6 +12,7 @@ COMMAND="/usr/bin/flameshot gui"
 SHORTCUT="Print"
 
 # Check if the shortcut already exists
+mkdir -p "/home/$USER/.config/autostart"
 if [ -f "/home/$USER/.config/autostart/$NAME.desktop" ]; then
     echo "$NAME already exists.."
 else
